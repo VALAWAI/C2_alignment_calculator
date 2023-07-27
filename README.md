@@ -1,1 +1,4 @@
-# C2_norm_optimizer
+# C2 Alignment Calculator
+
+This component computes...
+
