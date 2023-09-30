@@ -1,4 +1,4 @@
-from alignment_calculator import create_app
+from app import create_app
 
 from typing import Any
 
@@ -53,10 +53,15 @@ def your_value_semantics_funcion(mdl: YourModel) -> float:
 
 
 if __name__ == '__main__':
+
     app = create_app(
         YourModel,                      # your model class
         [...],                          # your model initialization arguments
         {...},                          # your model initialization keyword arguments
+        norms,                          # your norms dictionary
         your_value_semantics_funcion,   # your value semantics function
+        # path_length=10,               # change if needed, default is 10
+        # path_sample=500               # change if needed, default is 500
     )
+
     app.run(debug=True)
