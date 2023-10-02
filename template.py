@@ -54,6 +54,10 @@ def your_value_semantics_funcion(mdl: YourModel) -> float:
 
 if __name__ == '__main__':
 
+    norms = {
+        'n1': {'p11': ...}
+    }
+
     app = create_app(
         YourModel,                      # your model class
         [...],                          # your model initialization arguments
@@ -64,4 +68,4 @@ if __name__ == '__main__':
         # path_sample=500               # change if needed, default is 500
     )
 
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0", port=8000)
