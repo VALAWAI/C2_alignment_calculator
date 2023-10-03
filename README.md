@@ -84,6 +84,8 @@ The Alignment Calculator component is implemented as a
 it, use the `create_app` function:
 
 ```python
+from app import create_app
+
 app = create_app(
     YourModel,                      # your model class
     [...],                          # your model initialization arguments
