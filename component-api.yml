@@ -19,7 +19,7 @@ channels:
       summary: Provide the alignment for the current norms.
       message:
         $ref: '#/components/messages/alignment'
-  valawai/C2/alignment_calculator/data/norms:
+  valawai/C2/alignment_calculator/control/norms:
     subscribe:
       summary: Transmit the norms that will govern the evolution of the model.
       message:

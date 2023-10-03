@@ -1,9 +1,12 @@
+import argparse
 from mesa import Agent, Model
 from mesa.time import BaseScheduler
-from multiprocessing import Process
 from random import seed, uniform
 
 from app import create_app
+
+parser = argparse.ArgumentParser()
+parser.add_argument('port', type=int)
 
 seed(100)
 
@@ -95,47 +98,5 @@ if __name__ == '__main__':
         path_sample=100
     )
 
-    app.run(debug=True, host="0.0.0.0", port=8000)
-
-    # server = Process(target=app.run, kwargs={'debug': True})
-    # server.start()
-
-    # import requests
-    # url = "http://127.0.0.1:5000"
-
-    # def request_and_print():
-    #     response = requests.get(f"{url}/algn")
-    #     print(response.status_code)
-    #     print(response.json())
-
-    #     response = requests.patch(f"{url}/norms", json={'pay': {'r4': 0.}})
-    #     print(response.status_code)
-    #     print(response.json())
-
-    #     response = requests.get(f"{url}/algn")
-    #     print(response.status_code)
-    #     print(response.json())
-
-    #     response = requests.patch(f"{url}/path_length", data=str(100))
-    #     print(response.status_code)
-    #     print(response.json())
-
-    #     response = requests.get(f"{url}/algn")
-    #     print(response.status_code)
-    #     print(response.json())
-
-    #     response = requests.patch(f"{url}/path_sample", data=str(1))
-    #     print(response.status_code)
-    #     print(response.json())
-
-    #     response = requests.get(f"{url}/algn")
-    #     print(response.status_code)
-    #     print(response.json())
-
-    # client = Process(target=request_and_print)
-    # client.start()
-    # client.join()
-    # client.terminate()
-        
-    # server.terminate()
-    # server.join()
+    args = parser.parse_args()
+    app.run(debug=True, host='0.0.0.0', port=args.port)

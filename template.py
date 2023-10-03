@@ -1,7 +1,10 @@
+import argparse
 from app import create_app
 
 from typing import Any
 
+parser = argparse.ArgumentParser()
+parser.add_argument('port', type=int)
 
 class YourModel:
     def __init__(self, *args: Any, **kwargs: Any) -> None:
@@ -68,4 +71,5 @@ if __name__ == '__main__':
         # path_sample=500               # change if needed, default is 500
     )
 
-    app.run(debug=True, host="0.0.0.0", port=8000)
+    args = parser.parse_args()
+    app.run(debug=True, host="0.0.0.0", port=args.port)

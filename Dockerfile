@@ -46,4 +46,6 @@ COPY . .
 EXPOSE 8000
 
 # Run the application.
-CMD python3 ${MY_MODEL}.py
+# CMD echo $PORT
+CMD python3 ${MODEL}.py 5000
+# TODO change 5000 to $PORT and parse from docker run (?)
