@@ -37,7 +37,7 @@ simulating the evolution of the model under $N$ for a fixed number of time steps
  - Type: C2
  - Name: Alignment Calculator
  - Version: 1.0.0 (September 27, 2023)
- - API: [1.0.0 (February 3, 2023)](https://editor-next.swagger.io/?url=https://raw.githubusercontent.com/VALAWAI/C0_voice_to_text/main/component-api.yml)
+ - API: [1.0.0 (February 3, 2023)](https://editor-next.swagger.io/?url=https://raw.githubusercontent.com/VALAWAI/C2_alignment_calculator/main/component-api.yml)
  - VALAWAI API: [0.1.0 (September 18, 2023)](https://editor-next.swagger.io/?url=https://raw.githubusercontent.com/VALAWAI/MOV/main/valawai-api.yml)
  - Developed by: IIIA-CSIC
  - License: [MIT](LICENSE)
